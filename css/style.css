@@ -1,0 +1,289 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/*body*/
+
+*{
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+
+
+main{
+    display: grid;
+    grid-template-areas:"header     header      header"
+                        "article    article     article"
+                        "footer     footer      footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 3fr 1fr;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+.ul{
+    text-align: center;
+    list-style-type: none;
+}
+
+header{
+    grid-area: header;
+}
+
+nav{
+    font-size: 6rem;
+}
+
+
+body{
+    background-image: url(../src/img/Fondo.jpg);
+    background-position:center;
+    background-repeat: none;
+    background-attachment: fixed;
+    background-size: cover;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+article{
+    grid-area: article;
+}
+
+footer{
+    grid-area: footer;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-size: 10rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+h2{
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+    background-color: rgba(0, 0, 0, 0.473);
+    
+}
+
+h3{
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+}
+
+.silence{
+    margin-top: 5%;
+}
+
+/*Section Discography*/
+
+.albums{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.albums__title{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    text-align: center;
+    gap: 20rem;
+    margin-top: 5%;
+    flex-wrap: wrap;
+}
+
+.albums__playlist{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/*Galery*/
+.galery{
+    display: flex;
+    flex-direction: column;
+}
+
+.galery__article img:hover{
+transform: scale(1.03);
+transition: 0.3s;
+}
+.galery__article{
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+
+
+.galery__article img{
+    width: 40%;
+}
+
+/*join us*/
+
+.joinus{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+.joinus__legend{
+    color: white;
+    font-size: 3rem;
+}
+
+.joinus__input{
+    color: white;
+    font-size: 2.5rem;
+}
+
+.joinus__input--submit{
+    color: white;
+    font-size: 4rem;
+}
+
+.inputSize{
+    size: 5rem;
+    font-size: 2rem;
+    color: black;
+}
+
+/*footer*/
+
+:root{
+    --facebook: color=#3b5999;
+    --instagram: color=#e4405f;
+    --spotify: color=#3b59;
+    --twitter: color=#0077b5;
+    }
+    
+    .redes-container{
+    display: flex;
+    height: 15%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 6%;
+    }
+    
+    .redes-container ul li{
+    display: inline-block;
+    margin: 0 5rem;
+    width: 6rem;
+    height: 10rem;
+    text-align: center;
+    }
+    
+    .redes-container ul li a{
+    display: block;
+    padding: 0 2rem;
+    background-color: black;
+    color: white;
+    line-height: 5rem;
+    font-size: 2rem;
+    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.2);
+    transition: .2s;
+    }
+    
+    .redes-container ul:hover a{
+    filter: blur(2px);
+    }
+    
+    .redes-container ul li a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.2); 
+    filter: none;
+    }
+    
+    .redes-container ul li .facebook:hover{
+    background: var(--facebook);
+    }
+    
+    .redes-container ul li .instagram:hover{
+    background: var(--instagram);
+    }
+    
+    .redes-container ul li .spotify:hover{
+    background: var(--spotify);
+    }
+    
+    .redes-container ul li .twitter:hover{
+    background: var(--twitter);
+    }
+    
+    .footer{
+    margin-top: auto;
+    }
+
+
+/*Responsive Celular*/
+
+/* @media screen and (max-width:320px) {
+    main{
+        display: grid;
+        height: 100vh;
+        gap: 10px;
+        grid-template-areas:"header"
+                            "article"
+                            "footer";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 4fr 4fr 1fr;
+    }
+    
+    /* footer{
+        flex-wrap: nowrap;
+    }
+} */
+
+@media screen and (max-width:320px) {
+    *{
+        font-size: 16px;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .silence{
+        width: auto;
+        height: auto;
+        
+    }
+    h1{
+        color: white;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    h2{
+        font-size: 16px;
+    }
+
+    h3{
+        font-size: 16px;
+    }
+    footer{
+        display: none;
+    }
+
+    /*galeria*/
+    
+}
+
